@@ -1,0 +1,595 @@
+\body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Ліва колонка — меню */
+.sidebar {
+    width: 250px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 8px 12px;
+    background-color: lightgray;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    background-color: gray;
+    color: white;
+}
+
+/* Права колонка — контент */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h1, .content h2, .content h3 {
+    margin-top: 0;
+}
+
+ul, ol {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(34, 200, 89);
+}
+
+img {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    /* фонова картинка */
+    background: url('gege.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    /* колірний наклад (опціонально для затемнення) */
+    position: relative;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.7); /* прозорий фон для колонок */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    backdrop-filter: blur(50px); /* робимо фон розмитим за контейнером */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgba(240, 240, 240, 0.7); /* прозорий фон для меню */
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0 10px 10px 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2); /* світлий мильний шар */
+    backdrop-filter: blur(5px); /* сильне розмиття */
+    z-index: -1; /* позаду всіх елементів */
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 12px;
+    background-color: lightgray;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s; /* плавність */
+}
+
+/* Ефект при наведенні */
+.sidebar ul li a:hover {
+    transform: scale(1.1); /* збільшення */
+    background-color: gray;
+    color: white;
+}
+
+/* Фотографія */
+
+.photo1 {
+    position: relative;
+    width: 720px;
+}
+
+.photo1 img {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.photo1:hover img {
+    filter: brightness(70%);
+}
+
+.pdf-preview {
+    width: 250px;
+    margin-top: 20px;
+}
+
+.pdf-preview img {
+    width: 100%;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+/* ефект при наведенні */
+.pdf-preview:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.pdf-view {
+    margin-top: 30px;
+}
+
+.pdf-view iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+.pdf-preview {
+    width: 250px;
+    margin-top: 20px;
+}
+
+.pdf-preview img {
+    width: 100%;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.pdf-preview:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.pdf-view {
+    margin-top: 30px;
+}
+
+.pdf-view iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.pdf-block {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+    background: rgba(255,255,255,0.8);
+    padding: 0 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* коли відкрито */
+.pdf-block.active {
+    max-height: 300px;
+    padding: 20px;
+}
+
+.pdf-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.pdf-btn:hover {
+    background: black;
+}
+
+/* анімація картинки */
+.pdf-preview img {
+    width: 250px;
+    transition: 0.3s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pdf-preview img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Інтерактивне фото --- */
+.interactive-photo-page .photo-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.interactive-photo-page .photo-container img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.interactive-photo-page .hotspot {
+    position: absolute;
+    display: block;
+    background: rgba(255,255,0,0); /* прозорий блок */
+    transition: 0.3s;
+}
+
+.interactive-photo-page .hotspot:hover {
+    background: rgba(255,255,0,0.3); /* підсвітка при наведенні */
+    cursor: pointer;
+    border-radius: 5px;
+}
+.hotspot {
+    position: absolute;
+    top: 150px;    /* відступ зверху від контейнера з фото */
+    left: 50px;   /* відступ зліва від контейнера з фото */
+    width: 100px; /* ширина зони */
+    height: 100px;/* висота зони */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: gray;
+    color: white;
+}
+
+td, th {
+    text-align: center;
+}
+
+.toggle-title {
+    cursor: pointer;
+    background: gray;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.toggle-title:hover {
+    background: black;
+}
+
+/* схована таблиця */
+.hidden-table {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+/* коли відкрита */
+.hidden-table.active {
+    max-height: 500px;
+    margin-top: 10px;
+}
+
+form {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#resultMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* форма */
+.modern-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
+}
+
+/* група інпутів */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    color: black;
+}
+
+/* плаваючий текст */
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: gray;
+    transition: 0.3s;
+}
+
+/* ефект при вводі */
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+    top: -10px;
+    font-size: 12px;
+    color: black;
+}
+
+/* чекбокси */
+.check {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* кнопка */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00c6ff;
+}
+
+/* текст */
+.mini-title {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* повідомлення */
+#resultMessage {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-block {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.main-photo {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 400px;
+}
+
+.about-text p {
+    line-height: 1.6;
+}
+
+.main-photo {
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.main-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-card {
+    display: block;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.link-card:hover {
+    background: #dcdcdc;
+    transform: scale(1.05);
+}
+
+.styles-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.style-card {
+    position: relative;
+    width: 250px;
+    text-decoration: none;
+}
+
+.style-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.style-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: 600;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.style-card:hover img {
+    transform: scale(1.05);
+}
+
+.styles-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}   
+
+.style-card {
+    width: 23%;
+}
+
+.style-card img {
+    width: 100%;
+    height: 180px;        /* фиксированная высота */
+    object-fit: cover;    /* обрезает красиво */
+    border-radius: 10px;
+}
+
+.style-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.style-card {
+    overflow: hidden;
+}
+
