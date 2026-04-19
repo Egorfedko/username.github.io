@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- МЕНЮ -->
+    <div class="sidebar">
+        <h2>Меню</h2>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="index1.html">Про мене</a></li>
+            <li><a href="index2.html">Мої навички</a></li>
+            <li><a href="index3.html">Корисні посилання</a></li>
+            <li><a href="index4.html">Контакти</a></li>
+            <li><a href="index5.html">Стилі в дизайні середовища</a></li>
+        </ul>
+    </div>
+
+    <!-- КОНТЕНТ -->
+    <div class="content">
+
+        <h2>Зв'язатися зі мною</h2>
+
+        <form class="modern-form" onsubmit="return checkForm()">
+
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label>Ім'я</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label>Email</label>
+            </div>
+
+            <div class="input-group">
+                <select id="course">
+                    <option>1 курс</option>
+                    <option>2 курс</option>
+                    <option>3 курс</option>
+                </select>
+            </div>
+
+            <p class="mini-title">Що вам цікаво?</p>
+
+            <label class="check">
+                <input type="checkbox"> Дизайн інтер'єру
+            </label>
+
+            <label class="check">
+                <input type="checkbox"> Веб-дизайн
+            </label>
+
+            <label class="check">
+                <input type="checkbox"> 3D моделювання
+            </label>
+
+            <div class="input-group">
+                <textarea id="message" required></textarea>
+                <label>Повідомлення</label>
+            </div>
+
+            <button type="submit">Відправити</button>
+
+            <p id="resultMessage"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+function checkForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let result = document.getElementById("resultMessage");
+
+    if (name === "" || email === "") {
+        result.innerHTML = "❌ Заповни всі поля!";
+        result.style.color = "red";
+        return false;
+    }
+
+    result.innerHTML = "✅ Дякую, " + name + "!";
+    result.style.color = "lime";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої навички</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Меню -->
+    <div class="sidebar">
+        <h2>Меню</h2>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="index1.html">Про мене</a></li>
+            <li><a href="index2.html">Мої навички</a></li>
+            <li><a href="index3.html">Корисні посилання</a></li>
+            <li><a href="index4.html">Контакти</a></li>
+            <li><a href="index5.html">Стилі в дизайні середовища</a></li>
+        </ul>
+    </div>
+
+    <!-- Контент -->
+    <div class="content">
+
+        <h2>Мої навички</h2>
+
+        <ul>
+            <li>Дизайн
+                <ul>
+                    <li>Планування кімнат</li>
+                    <li>Підбір меблів</li>
+                </ul>
+            </li>
+            <li>Творчість
+                <ul>
+                    <li>Малювання</li>
+                    <li>Ідеї для інтер'єру</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- PDF прев'ю -->
+<h3>Моя 1 робота з Дизайн Проєктування</h3>
+
+<div class="pdf-preview" onclick="togglePDF()">
+    <img src="pdfjpeg.jpg" alt="Моя робота">
+</div>
+
+<!-- красивий блок -->
+<div id="pdfBlock" class="pdf-block">
+    <h4>Проєкт інтер'єру</h4>
+    <p>Тут представлена моя робота у форматі А3.</p>
+
+    <a href="pdf.pdf" target="_blank" class="pdf-btn">Відкрити повністю</a>
+</div>
+
+<h3 onclick="toggleTable('t1')" style="cursor:pointer; background:gray; color:white; padding:10px;">
+    ▶ Заліки — 1 курс
+</h3>
+
+<div id="t1" style="display:none;">
+    <table border="1" cellpadding="10">
+        <tr><th>Предмет</th><th>Оцінка</th></tr>
+        <tr><td>КК</td><td>70</td></tr>
+        <tr><td>ДУМ</td><td>91</td></tr>
+        <tr><td>ФПС</td><td>90</td></tr>
+        <tr><td>ФВ</td><td>90</td></tr>
+        <tr><td>ІМД</td><td>79</td></tr>
+        <tr><td>ОРЖПА</td><td>90</td></tr>
+        <tr><td>Французька</td><td>82</td></tr>
+        <tr><td>Практика</td><td>70</td></tr>
+        <tr><th>Середній</th><th>82</th></tr>
+    </table>
+</div>
+
+<br>
+
+<h3 onclick="toggleTable('t2')" style="cursor:pointer; background:gray; color:white; padding:10px;">
+    ▶ Заліки — 2 курс
+</h3>
+
+<div id="t2" style="display:none;">
+    <table border="1" cellpadding="10">
+        <tr><th>Предмет</th><th>Оцінка</th></tr>
+        <tr><td>ЕП</td><td>90</td></tr>
+        <tr><td>ІОП</td><td>80</td></tr>
+        <tr><td>МФ</td><td>78</td></tr>
+        <tr><td>ОРЖПА</td><td>96</td></tr>
+        <tr><td>ПГ</td><td>65</td></tr>
+        <tr><td>ІМД</td><td>67</td></tr>
+        <tr><td>ДП</td><td>85</td></tr>
+        <tr><td>ОКП</td><td>60</td></tr>
+        <tr><th>Середній</th><th>78</th></tr>
+    </table>
+</div>
+
+    </div>
+
+</div>
+<script>
+function togglePDF() {
+    let block = document.getElementById("pdfBlock");
+    block.classList.toggle("active");
+}
+</script>
+
+<script>
+function toggleTable(id) {
+    let el = document.getElementById(id);
+
+    if (el.style.display === "none") {
+        el.style.display = "block";
+    } else {
+        el.style.display = "none";
+    }
+}
+</script>
+
+
+</body>
+
+</body>
+</html>
