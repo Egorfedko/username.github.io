@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предмети в інтер’єрі</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Меню -->
+    <div class="sidebar">
+        <h2>Меню</h2>
+
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="index1.html">Про мене</a></li>
+            <li><a href="index2.html">Мої навички</a></li>
+            <li><a href="index3.html">Корисні посилання</a></li>
+            <li><a href="index4.html">Контакти</a></li>
+            <li><a href="index5.html">Стилі в дизайні середовища</a></li>
+            <li><a href="index6.html">Предмети в інтер’єрі</a></li>
+        </ul>
+    </div>
+
+    <!-- Контент -->
+    <div class="content">
+
+        <h1>Предмети в інтер’єрі</h1>
+
+        <div class="interactive-room">
+
+            <img src="room.avif" alt="Інтер’єр">
+
+            <!-- ТВ -->
+            <div class="hotspot"
+                 style="top: 400px; left: 500px;"
+                 data-title="Телевізор"
+                 data-text="Телевізор є важливою частиною сучасного інтер’єру та створює комфортну зону для відпочинку.">
+
+                +
+                <div class="tooltip">
+                    Телевізор
+                </div>
+            </div>
+
+            <!-- Диван -->
+            <div class="hotspot"
+                 style="top: 540px; left: 240px;"
+                 data-title="Диван"
+                 data-text="Диван створює затишну атмосферу та є центральною частиною вітальні.">
+
+                +
+                <div class="tooltip">
+                    Диван
+                </div>
+            </div>
+
+            <!-- Лампа -->
+            <div class="hotspot"
+                 style="top: 410px; left: 130px;"
+                 data-title="Лампа"
+                 data-text="Підлогова лампа створює м’яке освітлення та доповнює стиль інтер’єру.">
+
+                +
+                <div class="tooltip">
+                    Лампа
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Модальное окно -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" id="closeModal">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalText"></p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
